@@ -45,6 +45,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     alert('Thank you for your message');
 
   })
-
-  
-console.log('gia is a loving soulmate!');
