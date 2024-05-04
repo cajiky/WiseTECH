@@ -37,6 +37,23 @@ html {
     background-color: #555;
 }
 
+#messageBox {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    width: 300px; /* or any appropriate width */
+}
+
+#messageBox.minimized .content {
+    display: none;
+}
+
+#messageBox.expanded .content {
+    display: block;
+}
+
+
 /* Basic Reset */
 * {
     margin: 0;

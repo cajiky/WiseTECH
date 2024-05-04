@@ -46,5 +46,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
   })
 
-  
-console.log('gia is a loving soulmate!');
+  document.getElementById('messageBox').addEventListener('click', function() {
+    this.classList.toggle('expanded');
+    var content = this.querySelector('.content');
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+});
