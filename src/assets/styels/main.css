@@ -7,8 +7,36 @@ html {
     nav ul {
       flex-direction: column;
     }
-  }
-  
+}
+ 
+#contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 10;
+    margin: 20px;
+}  
+
+#contact input, #contact textarea{
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #555;
+}
+
 /* Basic Reset */
 * {
     margin: 0;
