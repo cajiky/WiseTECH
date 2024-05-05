@@ -1,53 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Wise Tech loaded successfully!');
+  console.log('Wise Tech loaded successfully!');
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
+      const targetElement = document.querySelector(this.getAttribute('href'));
+      if (targetElement) {
+          targetElement.scrollIntoView({
+              behavior: 'smooth'
+          });
+      }
   });
+});
 
-// document.getElementById('contact-form').addEventListener('submit', function(e) {
-// e.preventDefault();
-//     // Validation code here
-//     if (/* validation succeeds */) {
-//       // Submit form or show success message
-//     } else {
-//       // Show error message
-//     }
-//   });
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
 
-  document.getElementById('contactForm').addEventListener('submit', function(event){
-    event.preventDefault();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
 
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-
-    if(name && email){
+  if (name && email && message) {
       console.log("Name:", name);
       console.log("Email:", email);
       console.log("Message:", message);
-    
-      //Ajax Request
-
-      alert("Thank you for your submissions!");
-
-    } else {
-
-      alert('Please fill out all the fields')
-
-    }
-    alert('Thank you for your message');
-
-  })
-
-  document.getElementById('messageBox').addEventListener('click', function() {
-    this.classList.toggle('expanded');
-    var content = this.querySelector('.content');
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      alert("Thank you for your message. We will get back to you shortly!");
+  } else {
+      alert('Please fill out all the fields.');
+  }
 });

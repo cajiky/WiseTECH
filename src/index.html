@@ -6,52 +6,43 @@
     <meta name="description" content="Wise Tech - Your one-stop tech solution provider.">
     <meta name="keywords" content="tech, services, IT, solutions">
     <title>Wise Tech</title>
-    <link rel="stylesheet" href="assets/styels/main.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <script src="assets/scripts/main.js"></script>
 </head>
 <body>
     <header>
         <h1>Welcome to Wise Tech</h1>
         <p>Your one-stop tech solution.</p>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <main>
-        <nav>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>          
-        <section>
+        <section id="services">
             <h2>Services</h2>
             <p>Explore our wide range of tech services.</p>
-            <!-- More sections can be added here -->
-            <section class="hero">
-                <h2>Empowering Your Technology Needs</h2>
-                <p>Explore the solutions that can transform your business.</p>
-                <a href="#services" class="cta-btn">Learn More</a>
-            </section>
-            <section id="about">
-                <h2>About Us</h2>
-                <p>Learn more about our mission and team.</p>
-              </section>              
+            <button class="cta-btn">Learn More</button>
         </section>
-        <div id="messageBox" class="minimized">
-            Send us a message!
-            <div class="content" style="display: none;">
-                <section id="contact"> 
-                    <form id="contactForm">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                        <button type="submit">Send Message</button>
-                    </form>
-                </section>
-            </div>
-        </div>        
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Learn more about our mission and team.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contactForm" class="form-container">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
     </main>
     <footer>
         <p>Contact us: info@wisetech.com</p>
     </footer>
-    <script src="assets/scripts/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,148 @@
+:root {
+    /* Default Theme */
+    --color-primary: #1976D2; /* Lighter Blue */
+    --color-secondary: #FF9800; /* Orange */
+    --color-accent: #FFEB3B; /* Neon Yellow */
+    --color-text: #FFFFFF; /* White */
+    --color-background: #212121; /* Rich Black */
+}
+
+.theme-cool {
+    --color-primary: #0097A7; /* Cool Cyan */
+    --color-secondary: #00BCD4; /* Light Blue */
+    --color-accent: #B2EBF2; /* Soft Cyan */
+    --color-text: #000000; /* Black */
+    --color-background: #E0F7FA; /* Light Cyan background */
+}
+
+.theme-warm {
+    --color-primary: #FF5722; /* Deep Orange */
+    --color-secondary: #E91E63; /* Pink */
+    --color-accent: #F8BBD0; /* Light Pink */
+    --color-text: #3E2723; /* Dark Brown */
+    --color-background: #FBE9E7; /* Light Pink background */
+}
+
+.theme-tech-savvy {
+    --color-primary: #285078; /* Sleek Blue */
+    --color-secondary: #4CAF50; /* Muted Green */
+    --color-accent: #FF1744; /* Vibrant Red */
+    --color-text: #ECEFF1; /* Light Greyish */
+    --color-background: #263238; /* Dark Blue Grey */
+}
+
+.theme-minimalist {
+    --color-primary: #212121; /* Soft Black */
+    --color-secondary: #FAFAFA; /* Off-white */
+    --color-accent: #B0BEC5; /* Grey */
+    --color-text: #212121; /* Dark Text */
+    --color-background: #FFFFFF; /* White */
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
+    color: var(--color-text);
+    background: var(--color-background);
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 30px 20px; /* Increased padding */
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: var(--color-accent);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-text);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+section {
+    width: 100%;
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: var(--color-text);
+    color: var(--color-secondary);
+    border-radius: 8px;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 5px;
+}
+
+button {
+    background: var(--color-primary);
+    color: var(--color-text);
+    border: none; /* Cleaner look */
+    padding: 12px 20px;
+    font-size: 16px; /* Larger, more readable text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle button shadow */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+button:hover {
+    background: var(--color-accent);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    header, section {
+        padding: 10px;
+    }
+}
