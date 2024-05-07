@@ -27,40 +27,6 @@
             <p class="text-sm text-gray-600 mt-4">* We will email the winner for shipping details.</p>
         </div>
     </div>
+    <script src="/assets/scripts/signup.js"></script>
 </body>
-<script>
-document.getElementById('signupForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const email = document.getElementsByName('email')[0].value;
-    const zipcode = document.getElementsByName('zipcode')[0].value;
-
-    // Log the data here, before making the fetch request
-    console.log('Submitting this data:', { email: email, zipcode: zipcode });
-
-    fetch('/submit', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            email: email,
-            zipcode: zipcode,
-        }),
-    })
-    .then(response => {
-        if(response.ok) {
-            return response.text();
-        }
-        throw new Error('Something went wrong');
-    })
-    .then(data => {
-        alert('Thank you for signing up!');
-        window.location.href = 'index.html';
-    })
-    .catch(error => console.error('Error:', error));
-});
-</script>
-
-
-</script>
 </html>
