@@ -1,0 +1,66 @@
+<!-- waiting-list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Waiting List - WiseTech</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="container mx-auto p-4 flex flex-row items-center justify-between">
+        <!-- Tech Bag Image Section -->
+        <div class="w-1/2">
+            <img src="https://source.unsplash.com/random/400x400?sig=bag" alt="Tech Bag" class="w-full h-auto">
+        </div>
+        <!-- Form Section -->
+        <div class="w-1/2 max-w-md">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Sign Up for a Free Tech Bag</h2>
+            <form id="signupForm" class="space-y-4">
+                <input type="email" name="email" placeholder="Enter your email" required class="w-full px-4 py-2 text-base text-gray-700 bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <input type="text" name="zipcode" placeholder="Enter your zip code" required class="w-full px-4 py-2 text-base text-gray-700 bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Submit
+                </button>
+            </form>
+            <p class="text-sm text-gray-600 mt-4">* We will email the winner for shipping details.</p>
+        </div>
+    </div>
+</body>
+<script>
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const email = document.getElementsByName('email')[0].value;
+    const zipcode = document.getElementsByName('zipcode')[0].value;
+
+    // Log the data here, before making the fetch request
+    console.log('Submitting this data:', { email: email, zipcode: zipcode });
+
+    fetch('/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            email: email,
+            zipcode: zipcode,
+        }),
+    })
+    .then(response => {
+        if(response.ok) {
+            return response.text();
+        }
+        throw new Error('Something went wrong');
+    })
+    .then(data => {
+        alert('Thank you for signing up!');
+        window.location.href = 'index.html';
+    })
+    .catch(error => console.error('Error:', error));
+});
+</script>
+
+
+</script>
+</html>
