@@ -24,16 +24,17 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
         throw new Error('Something went wrong on server side');
     })
     .then(data => {
-        showModal(); // Assuming showModal is a function defined here or imported
+        showModal();
     })
     .catch(error => {
         console.error('Error:', error);
-        showModal('Failed to submit: ' + error.message); // Modify modal to show errors
+        showModal('Failed to submit: ' + error.message);
     });
 });
 
 function showModal(message = 'Thank you for signing up!') {
-    document.getElementById('modal').classList.remove('hidden');//show the model
+    document.getElementById('modal').classList.remove('hidden');
+    document.getElementById('modal-message').textContent = `Message ${message}`;
 }
 
 function closeModal() {

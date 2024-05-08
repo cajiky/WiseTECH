@@ -6,30 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Our Waiting List - WiseTech</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/assets/styles/output.css" rel="stylesheet">
     <link href="/assets/styles/custom.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
-    <div class="container mx-auto flex flex-row items-center justify-between">
+    <div class="container mx-auto flex flex-col sm:flex-row items-center justify-between">
         <!-- Tech Bag Image Section -->
-        <div class="w-1/2">
-            <img src="https://source.unsplash.com/random/400x400?sig=bag" alt="Tech Bag" class="max-w-full h-auto">
+        <div class="w-full sm:w-1/2 mb-4 sm:mb-0">
+            <img src="https://source.unsplash.com/random/400x400?sig=bag" alt="Tech Bag" class="max-w-full h-auto mx-auto">
         </div>
         <!-- Form Section -->
-        <div class="w-1/2 max-w-md">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Sign Up for a Free Tech Bag</h2>
+        <div class="w-full sm:w-1/2 max-w-md">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4 text-center sm:text-left">Sign Up for a Free Tech Bag</h2>
             <form id="signupForm" class="space-y-4">
                 <input type="email" name="email" placeholder="Enter your email" required class="form-input">
                 <input type="text" name="zipcode" placeholder="Enter your zip code" required class="form-input">
-                <button type="submit" class="btn-primary">
+                <button type="submit" class="btn-primary w-full">
                     Submit
                 </button>
             </form>
-            <div id="modal" class="modal-background">
-                <div class="modal-content">
-                    <h3 class="text-lg font-bold">Thank You!</h3>
-                    <p class="text-gray-600">Your submission has been received.</p>
-                    <button onclick="closeModal()" class="btn-primary mt-4">Close</button>
-                </div>
+           <!-- Modal Structure -->
+        <div id="modal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 id="modal-message" class="text-lg font-bold">Thank You!</h3>
+                <p>Your submission has been received.</p>
+                <button onclick="closeModal()" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Close</button>
             </div>
-            <p class="text-sm text-gray-600 mt-4">* We will email the
+        </div>
+            <p class="text-sm text-gray-600 mt-4 text-center sm:text-left">* We will email the winner for shipping information :D *</p>
+        </div>
+    </div>
+    <script src="/assets/scripts/signup.js"></script>
+</body>
+</html>
+        
+        
