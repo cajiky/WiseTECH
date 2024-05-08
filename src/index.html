@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to WiseTech</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/assets/styles/custom.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-    <div class="container mx-auto p-4 flex flex-row items-center justify-between">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="container mx-auto flex flex-row items-center justify-between">
         <!-- Logo Section -->
         <div class="w-1/2">
-            <img src="https://source.unsplash.com/random/400x400?sig=tech" alt="Logo" class="w-full h-auto">
+            <img src="https://source.unsplash.com/random/400x400?sig=tech" alt="Logo" class="max-w-full h-auto">
         </div>
         <!-- Business Info Section -->
         <div class="w-1/2 text-center">
             <h1 class="text-4xl font-bold text-gray-900 mb-4">WiseTech</h1>
             <p class="text-xl text-gray-700 mb-6">Coming Soon to You but Better</p>
-            <button onclick="location.href='waiting-list.html'" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            <button onclick="location.href='waiting-list.html'" class="btn-primary">
                 Join Our Waiting List
             </button>
         </div>
     </div>
-    <script src="src/assets/scripts/main.js"></script>
 </body>
 </html>

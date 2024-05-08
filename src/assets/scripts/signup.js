@@ -1,4 +1,6 @@
 // src/assets/scripts/signup.js
+console.log('signup.js has been loded');
+
 document.getElementById('signupForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const email = document.getElementsByName('email')[0].value;
@@ -17,6 +19,7 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     .then(response => {
         if(response.ok) {
             return response.text();
+            console.log('signup.js is now loading');
         }
         throw new Error('Something went wrong on server side');
     })
@@ -30,5 +33,10 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
 });
 
 function showModal(message = 'Thank you for signing up!') {
-    // Modal display logic
+    document.getElementById('modal').classList.remove('hidden');//show the model
+}
+
+function closeModal() {
+    document.getElementById('modal').classList.add('hidden');
+    window.location.href = '/';
 }
