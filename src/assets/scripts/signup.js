@@ -1,5 +1,5 @@
 // src/assets/scripts/signup.js
-console.log('signup.js has been loded');
+console.log('signup.js has been loaded');
 
 document.getElementById('signupForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -17,14 +17,13 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
         }),
     })
     .then(response => {
-        if(response.ok) {
+        if (response.ok) {
             return response.text();
-            console.log('signup.js is now loading');
         }
         throw new Error('Something went wrong on server side');
     })
     .then(data => {
-        showModal();
+        showModal('Thank you for signing up!');
     })
     .catch(error => {
         console.error('Error:', error);
@@ -33,11 +32,20 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
 });
 
 function showModal(message = 'Thank you for signing up!') {
-    document.getElementById('modal').classList.remove('hidden');
-    document.getElementById('modal-message').textContent = `Message ${message}`;
+    const modal = document.getElementById('modal');
+    const modalMessage = document.getElementById('modal-message');
+    if (modal && modalMessage) {
+        modal.classList.remove('hidden');
+        modalMessage.textContent = message;
+    } else {
+        console.error('Modal or modal message elements not found!');
+    }
 }
 
 function closeModal() {
-    document.getElementById('modal').classList.add('hidden');
+    const modal = document.getElementById('modal');
+    if (modal) {
+        modal.classList.add('hidden');
+    }
     window.location.href = '/';
 }
