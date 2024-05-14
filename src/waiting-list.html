@@ -1,0 +1,46 @@
+<!-- waiting-list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Our Waiting List - WiseTech</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/content/temp-logo/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/content/temp-logo/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/content/temp-logo/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/content/temp-logo/favicon/favicon.ico">
+    <link rel="manifest" href="assets/content/temp-logo/favicon/site.webmanifest">    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/assets/styles/output.css" rel="stylesheet">
+    <link href="/assets/styles/custom.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#FFFFFF] flex items-center justify-center min-h-screen p-4">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
+        <!-- Tech Bag Image Section -->
+        <div class="w-full lg:w-2/5 max-w-lg p-8 order-1"> <!-- Moved above form section -->
+            <img id="logo" src="assets/content/temp-logo/temp logo.jpeg" alt="Tech Bag" class="w-full h-auto rounded-lg">
+        </div>
+        <!-- Form Section -->
+        <div class="w-full lg:w-2/5 max-w-lg px-12 py-8 bg-white rounded-lg shadow-lg order-2" style="background-color: #FFFBE6;">
+            <h2 class="text-4xl font-bold text-gray-900 mb-6 text-center md:text-left">Sign Up for a Free Tech Bag</h2>
+            <form id="signupForm" class="space-y-6">
+                <input type="email" name="email" placeholder="Enter your email" required class="form-input text-lg p-4 rounded-lg">
+                <input type="text" name="zipcode" placeholder="Enter your zip code" required class="form-input text-lg p-4 rounded-lg">
+                <button type="submit" class="btn-primary w-full text-lg py-3" style="background-color: #FF684B;">
+                    Submit
+                </button>
+            </form>
+            <p class="text-md text-gray-600 mt-4 text-center md:text-left">* We will email the winner for shipping details *</p>
+        </div>
+        <div id="modal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center">
+            <div class="bg-white p-4 rounded-lg shadow-lg">
+                <h3 class="text-lg font-bold">Thank You!</h3>
+                <p id="modal-message" class="text-gray-600">Your submission has been received.</p>
+                <button onclick="closeModal()" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/scripts/signup.js"></script>
+</body>
+</html>

@@ -1,52 +1,35 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wise Tech - Your one-stop tech solution provider.">
-    <meta name="keywords" content="tech, services, IT, solutions">
-    <title>Wise Tech</title>
-    <link rel="stylesheet" href="assets/styels/main.css">
+    <title>Welcome to WiseTech</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/content/temp-logo/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/content/temp-logo/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/content/temp-logo/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="assets/content/temp-logo/favicon/favicon.ico">
+    <link rel="manifest" href="assets/content/temp-logo/favicon/site.webmanifest">  
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="/assets/styles/output.css" rel="stylesheet">
+    <link href="/assets/styles/custom.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <h1>Welcome to Wise Tech</h1>
-        <p>Your one-stop tech solution.</p>
-    </header>
-    <main>
-        <nav>
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>          
-        <section>
-            <h2>Services</h2>
-            <p>Explore our wide range of tech services.</p>
-            <!-- More sections can be added here -->
-            <section class="hero">
-                <h2>Empowering Your Technology Needs</h2>
-                <p>Explore the solutions that can transform your business.</p>
-                <a href="#services" class="cta-btn">Learn More</a>
-            </section>
-            <section id="about">
-                <h2>About Us</h2>
-                <p>Learn more about our mission and team.</p>
-              </section>              
-        </section>
-        <section id="contact"> 
-            <form id="contactForm">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>Contact us: info@wisetech.com</p>
-    </footer>
-    <script src="assets/scripts/main.js"></script>
+<body class="bg-[#FFFFFF] flex items-center justify-center min-h-screen p-4">
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8">
+        <!-- Logo Image Section -->
+        <div class="w-full lg:w-2/5 max-w-lg p-4 order-1"> <!-- Moved above welcome section -->
+            <img id="logo" src="assets/content/temp-logo/temp logo.jpeg" alt="WiseTech Logo" class="w-full h-auto rounded-lg">
+        </div>
+        <!-- Welcome Section -->
+        <div class="w-full lg:w-2/5 max-w-lg  px-4 py-4 bg-white rounded-lg shadow-lg order-2" style="background-color: #FFFBE6;">
+            <h1 class="text-5xl font-bold text-gray-900 mb-6 text-center md:text-left">Welcome to WiseTech</h1>
+            <p class="text-xl text-gray-600 mb-6 text-center md:text-left">Simplifying Technology, Enhancing Life.</p>
+            <button onclick="location.href='waiting-list.html'" class="btn-primary w-full text-lg py-3" style="background-color: #FF684B;">
+                Learn More
+            </button>
+        </div>
+    </div>
+    <script src="/assets/scripts/main.js"></script>
 </body>
 </html>

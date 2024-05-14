@@ -1,0 +1,20 @@
+/* src/assets/styles/custom.css */
+.btn-primary {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+}
+.modal-content {
+    @apply bg-white p-4 rounded-lg shadow-lg;
+}
+.modal-background {
+    @apply fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center hidden;
+}
+.form-input {
+    @apply w-full px-4 py-2 text-base text-gray-700 bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* src/assets/styles/custom.css */
+.btn-primary {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors;
+}
+
+
